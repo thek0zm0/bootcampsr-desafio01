@@ -1,5 +1,7 @@
 package com.bootcampspringreact.desafio01.dto;
 
+import com.bootcampspringreact.desafio01.entities.Client;
+
 import java.io.Serializable;
 import java.time.Instant;
 
@@ -21,6 +23,17 @@ public class ClientDto implements Serializable {
         this.income = income;
         this.birthDate = birthDate;
         this.children = children;
+    }
+
+    public ClientDto(Client client)
+    {
+        this.id = client.getId();
+        this.name = client.getName();
+        this.cpf = client.getCpf();
+        this.income = client.getIncome();
+        this.birthDate = client.getBirthDate();
+        this.children = client.getChildren();
+
     }
 
     public Long getId() {
